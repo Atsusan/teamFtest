@@ -1,0 +1,54 @@
+@use '../global' as global;
+
+.c-section__title {
+    font-family: global.$ff-en;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 80px;
+    color: global.$text-color;
+
+        @include global.mq(sp) {
+            font-size: 32px;
+            line-height: 52px;
+        }
+
+    &__sub {
+        font-family: global.$ff-en;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: global.$text-color;
+
+            @include global.mq(sp) {
+                font-size: 12px;
+                line-height: 12px;
+            }
+    }
+}
+
+/*== タイトルの文字色が#fffバージョン　*/
+.c-section__title--rev {
+    font-family: global.$ff-en;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 80px;
+    color: #fff;
+
+        @include global.mq(sp) {
+            font-size: 32px;
+            line-height: 52px;
+        }
+
+    &__sub--rev {
+        font-family: global.$ff-en;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #fff;
+
+            @include global.mq(sp) {
+                font-size: 12px;
+                line-height: 12px;
+            }
+    }
+}

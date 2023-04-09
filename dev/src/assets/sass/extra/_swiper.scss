@@ -1,0 +1,72 @@
+@use '../global' as global;
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  // cardの影を表示するための処理
+  padding: 3px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 280px;
+  margin-left: 40px;
+
+    @include global.mq(tab) {
+      // max-width: 100%;
+      margin-left: 0;
+      // justify-content: center;
+    }
+
+    @include global.mq(sp) {
+      max-width: 100%;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 27px;
+  height: 27px;
+
+    // @include global.mq(tab) {
+    //   display: none;
+    // }
+}
+
+.swiper-button-prev::after {
+  left: -42.67px;
+  background: url(../img/parts/prev.svg) no-repeat center center/contain;
+
+    @include global.mq(tab) {
+      left: 0;
+    }
+}
+
+.swiper-button-next::after {
+  right: -42.67px;
+  background: url(../img/parts/next.svg) no-repeat center center/contain;
+
+    @include global.mq(tab) {
+      right: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  .swiper-button-prev::after {
+    left: 0;
+  }
+  .swiper-button-next::after {
+    right: 0;
+  }
+}

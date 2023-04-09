@@ -1,0 +1,85 @@
+@use '../global' as global;
+
+
+.p-contact {
+    background-color: #EFF0F5;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: global.$ff-en;
+        font-size: 32px;
+        line-height: 52px;
+        color: #333;
+
+            @include global.mq(sp) {
+                font-size: 18px;
+                line-height: 32px;
+            }
+    }
+
+    &__btnArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+            @include global.mq(sp) {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+
+                @include global.mq(sp) {
+                    gap: 3px;
+                }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+
+                @include global.mq(sp) {
+                    gap: 3px;
+                }
+        }
+    }
+
+    &__read {
+        display: inline-block;
+        font-family: global.$ff-en;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+
+            @include global.mq(sp) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+    }
+
+    &__btn {
+        @include global.mq(sp) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &:hover {
+            @include global.mq(sp) {
+                padding: 8px 57px;
+            }
+        }
+    }
+}

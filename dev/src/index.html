@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<!-- OGP宣言 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no"><!-- 電話のリンクをしない設定 -->
+    <title>Takken&nbsp;Hanbai</title>
+    <meta name="description" content="説明文"><!-- 概要欄 -->
+    <meta property="og:title" content="START"><!-- OGPタイトル -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/"><!-- OGPサイトURL -->
+    <meta property="og:image" content="https://example.com/img/ogp.png"><!-- OGPサムネイル -->
+    <meta property="og:site_name" content="START"><!-- OGPサイトネーム -->
+    <meta property="og:description" content="説明文"><!-- OGPサイトの概要欄 -->
+    <meta name="twitter:card" content="summary_large_image"><!-- OGP Twitterカード -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css?ver=5.8.2">
+    <!-- GoogleFonts 1 Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- GoogleFotns 2 Robot -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- GoogleFonts 3 Noto Sans Japanese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- ファビコンの設定 -->
+    <!-- <link rel="icon" type="image/png" href=""> 192 * 192 -->
+    <!-- <link rel="icon" type="image/png" href=""> 180 * 180 -->
+    <!-- <link rel="icon" type="image/png" href=""> nomal -->
+</head>
+
+<body>
+    <div class="l-bg-wrapper">
+        <header class="l-header">
+            <div class="p-header">
+                <h1 class="p-header__logo">
+                    <a href="#" class="p-header__logo__link">
+                        <img src="./assets/img/logo.svg" alt="Takken&nbsp;Hanbai">
+                    </a>
+                </h1>
+                <nav class="p-header__nav u-hidden-tab">
+                    <ul class="p-header__list">
+                        <li class="p-header__item">
+                            <a href="#about" class="p-header__item__link">
+                                <span>会社案内</span>
+                            </a>
+                        </li>
+                        <li class="p-header__item">
+                            <a href="#products" class="p-header__item__link">
+                                <span>製品紹介</span>
+                            </a>
+                        </li>
+                        <li class="p-header__item">
+                            <a href="#works" class="p-header__item__link">
+                                <span>販売店</span>
+                            </a>
+                        </li>
+                        <li class="p-header__item">
+                            <a href="#blog" class="p-header__item__link">
+                                <span>ブログ</span>
+                            </a>
+                        </li>
+                        <li class="p-header__item--contact c-btn">
+                            <a href="#contact" class="p-header__item__link">
+                                <span>お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.p-header__list -->
+                </nav>
+
+                <!-- drawer実装 -->
+                <div id="js-drawer__btn" class="p-drawer__btn u-hidden-pc">
+                    <span></span><span></span><span></span>
+                </div>
+                <nav id="js-drawer__nav" class="p-drawer__nav">
+                    <div id="js-drawer__list" class="p-drawer__list">
+                        <ul>
+                            <li><a href="#">会社案内</a></li>
+                            <li><a href="#">製品紹介</a></li>
+                            <li><a href="#">販売店</a></li>
+                            <li><a href="#">ブログ</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="p-drawer__circle-bg"></div>
+                <!-- / drawer実装 -->
+            </div>
+            <!-- / .p-header -->
+        </header>
+        <!-- /.l-header -->
+        <div class="l-mv p-mv">
+            <div class="p-mv__bg">
+                <img class="u-hidden-sp" src="./assets/img/mv-img__pc.jpg" alt="金属の歯車の画像">
+                <img class="u-active-sp" src="./assets/img/mv-img__sp.jpg" alt="金属の歯車の画像">
+            </div>
+            <div class="l-mv__content-area p-mv__content-area">
+                <p class="p-mv__read-main">戸車国内シェア<span class="p-mv__read-main__span">No.1</span></p>
+                <p class="p-mv__read-sub l-mv__read-sub c-animate-title">戸車と共に歩む、未来への回転</p>
+                <a href="#" class="p-mv__contact u-hidden-pc c-btn l-mv__contact">お問い合わせ</a>
+            </div>
+            <!-- /.p-mv__content-area -->
+        </div>
+        <!-- / .l-mv -->
+    </div>
+    <!-- /.l-bg-wrapper -->
+    <main>
+        <section class="l-news">
+            <div class="l-news__title">
+                <h2 class="c-section__title">News</h2>
+                <span class="c-section__title__sub">お知らせ</span>
+            </div>
+            <div class="p-news__index">
+                <dl class="p-news__item">
+                    <dt class="p-news__index-date">2023.4.07</dt>
+                    <dd class="p-news__index-title">新製品発売のご案内</dd>
+                </dl>
+                <dl class="p-news__item">
+                    <dt class="p-news__index-date">2023.2.10</dt>
+                    <dd class="p-news__index-title">役員等の異動について</dd>
+                </dl>
+                <dl class="p-news__item">
+                    <dt class="p-news__index-date">2023.12.1</dt>
+                    <dd class="p-news__index-title">休業日のお知らせ</dd>
+                </dl>
+                <div class="p-news__index-footer">
+					<a href="#" class="p-news__view-more c-btn-view-more">
+							<span>view&nbsp;more</span>
+					</a>
+                </div>
+            </div>
+        </section>
+        <!-- /.l-news -->
+        <section class="l-about">
+            <div class="l-about__inner p-about">
+                <div class="p-about__items-flex">
+                    <div class="p-about__item-text">
+                        <h2 class="c-section__title--rev">About</h2>
+                        <span class="c-section__title__sub--rev">宅研販売について</span>
+                        <p class="p-about__lead">戸車国内シェアNo.1</p>
+                        <p class="p-about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        <div class="l-about__btnArea">
+                            <a href="#" class="p-about__btn c-btn-view-more--rev">
+                                <span>view&nbsp;more</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.p-about__item-text -->
+                    <div class="p-about__item-img">
+                        <div class="p-about__img-wrapper">
+                            <div class="p-about__img">
+                                <img src="./assets/img/about-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.p-about__item-img -->
+                </div>
+            </div>
+            <!-- /.l-about__inner -->
+        </section>
+        <!-- /.l-about -->
+        <section class="l-products">
+            <div class="l-products__inner">
+                <div class="l-products__title">
+                    <h2 class="c-section__title">Products</h2>
+                    <span class="c-section__title__sub">製品紹介</span>
+                </div>
+                <div class="p-products__index">
+                    <div class="p-products__items">
+                        <div class="p-products__item">
+                            <div class="p-products__head">
+                                <div class="p-products__title">扉関連機器</div>
+                            </div>
+                            <div class="p-products__body">
+                                <div class="p-products__text">テキストテキストテキストテキスト
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    テキストテキストテキストテキスト</div>
+                            </div>
+                        </div>
+                        <div class="p-products__item">
+                            <div class="p-products__head">
+                                <div class="p-products__title">防犯機器</div>
+                            </div>
+                            <div class="p-products__body">
+                                <div class="p-products__text">テキストテキストテキストテキスト
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    テキストテキストテキストテキスト</div>
+                            </div>
+                        </div>
+                        <div class="p-products__item">
+                            <div class="p-products__head">
+                                <div class="p-products__title">OEM製品</div>
+                            </div>
+                            <div class="p-products__body">
+                                <div class="p-products__text">テキストテキストテキストテキスト
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    テキストテキストテキストテキスト</div>
+                            </div>
+                        </div>
+                        <div class="p-products__item">
+                            <div class="p-products__head">
+                                <div class="p-products__title">医療機器</div>
+                            </div>
+                            <div class="p-products__body">
+                                <div class="p-products__text">テキストテキストテキストテキスト
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    テキストテキストテキストテキスト</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-products__index-footer">
+					<a href="#" class="p-products__view-more c-btn-view-more">
+							<span>view&nbsp;more</span>
+					</a>
+                </div>
+            </div>
+        </section>
+        <!-- /.l-products -->
+        <section class="l-blog">
+            <div class="l-inner">
+                <h2 class="c-section__title">Blog</h2>
+                <span class="c-section__title__sub">ブログ</span>
+            </div>
+            <!-- /.l-inenr -->
+            <!-- Slider main container -->
+            <div class="l-blog__swiper l-inner--swiper">
+                <!-- /.l-inner--swiper -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <ul class="swiper-wrapper">
+                        <!-- Slides -->
+                        <li class="swiper-slide">
+                            <a class="p-card">
+                                <div class="p-card__head">
+                                    <img src="./assets/img/blog-card-img1.png" alt="card">
+                                </div>
+                                <div class="p-card__body">
+                                    <p class="p-card__title">「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。</p>
+                                    <p class="p-card__description">
+                                        「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a class="p-card">
+                                <div class="p-card__head">
+                                    <img src="./assets/img/blog-card-img2.png" alt="card">
+                                </div>
+                                <div class="p-card__body">
+                                    <p class="p-card__title">タイトル</p>
+                                    <p class="p-card__description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス…
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a class="p-card">
+                                <div class="p-card__head">
+                                    <img src="./assets/img/blog-card-img3.png" alt="card">
+                                </div>
+                                <div class="p-card__body">
+                                    <p class="p-card__title">タイトル</p>
+                                    <p class="p-card__description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス…
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a class="p-card">
+                                <div class="p-card__head">
+                                    <img src="./assets/img/mv-img__sp.jpg" alt="card">
+                                </div>
+                                <div class="p-card__body">
+                                    <p class="p-card__title">タイトル</p>
+                                    <p class="p-card__description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス…
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a class="p-card">
+                                <div class="p-card__head">
+                                    <img src="./assets/img/mv-img__sp.jpg" alt="card">
+                                </div>
+                                <div class="p-card__body">
+                                    <p class="p-card__title">タイトル</p>
+                                    <p class="p-card__description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス…
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="l-inner l-blog__btnArea">
+                <a href="#" class="l-blog__btn p-blog__btn c-btn-view-more">
+                    <span>view&nbsp;more</span>
+                </a>
+            </div>
+            <!-- /.l-inenr -->
+        </section>
+        <!-- /.l-blog -->
+        <section class="l-contact p-contact">
+            <div class="l-inner">
+                <div class="p-contact__content">
+                    <h2 class="p-contact__title c-animate-title l-contact__title">まずはお気軽にご相談ください</h2>
+                    <div class="p-contact__btnArea">
+                        <div class="p-contact__btnArea__left">
+                            <span class="p-contact__read c-read">話を聞いてみたい方は</span>
+                            <!-- /.p-contact__btn__read c-btn-read -->
+                            <a href="#" class="c-btn c-btn--iconBl p-contact__btn">無料で相談する</a>
+                        </div>
+                        <!-- /.p-contact__btnArea__left -->
+                        <div class="p-contact__btnArea__right">
+                            <span class="p-contact__read c-read">もっと詳しく知りたい方は</span>
+                            <!-- /.p-contact__btn__read c-btn-read -->
+                            <a href="#" class="c-btn c-btn--iconWh p-contact__btn">資料を請求する</a>
+                        </div>
+                        <!-- /.p-contact__btnArea__right -->
+                    </div>
+                    <!-- /.p-contact__btnArea -->
+                </div>
+                <!-- /.p-contact__content -->
+            </div>
+            <!-- /.l-inner -->
+        </section>
+        <!-- /.l-contact -->
+    </main>
+    <footer class="l-footer">
+        <nav class="p-footer__nav">
+            <div class="l-footer__inner l-inner">
+                <ul class="l-footer__nav p-footer__nav__list">
+                    <li class="p-footer__nav__item">
+                        <a href="#" class="p-footer__item__link">
+                            <span>HOME</span>
+                        </a>
+                    </li>
+                    <li class="p-footer__nav__item">
+                        <a href="#about" class="p-footer__item__link">
+                            <span>会社案内</span>
+                        </a>
+                    </li>
+                    <li class="p-footer__nav__item">
+                        <a href="#products" class="p-footer__item__link">
+                            <span>製品紹介</span>
+                        </a>
+                    </li>
+                    <li class="p-footer__nav__item">
+                        <a href="#works" class="p-footer__item__link">
+                            <span>販売店</span>
+                        </a>
+                    </li>
+                    <li class="p-footer__nav__item">
+                        <a href="#blog" class="p-footer__item__link">
+                            <span>ブログ</span>
+                        </a>
+                    </li>
+                    <li class="p-footer__nav__item">
+                        <a href="#contact" class="p-footer__item__link">
+                            <span>お問い合わせ</span>
+                        </a>
+                    </li>
+                    <li class="p-footer__nav__item">
+                        <a href="#" class="p-footer__item__link">
+                            <span>プライバシーポリシー</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="l-inner">
+                    <div class="p-footer__copy">&copy; 2023 宅研販売</div>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <!-- footer -->
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

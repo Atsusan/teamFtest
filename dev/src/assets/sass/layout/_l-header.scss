@@ -1,0 +1,21 @@
+@use '../global' as global;
+
+.l-header {
+    // 高さ 横幅
+    padding: 14px 80px;
+    // 位置
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    // 幅
+    width: 100%;
+
+        @include global.mq(tab) {
+            padding: 14px 40px;
+        }
+
+        @include global.mq(sp) {
+            padding: 14px 20px;
+        }
+}

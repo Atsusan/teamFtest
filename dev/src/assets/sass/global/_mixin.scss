@@ -1,0 +1,50 @@
+@use "./variables" as global;
+
+// ---
+// メディアクエリー
+// ---
+@mixin mq($breakpoint: sp) {
+	@media #{map-get(global.$breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+/* remの計算 */
+$baseFontSize: 16;
+@function rem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}
+
+// アニメーション初期値
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
+
+
+//SVG画像のカラー変更 %23以降が色の設定となる
+// icon1
+@mixin icon1($color) {
+  //base64にてSVGファイルをエンコードしたコードをそのままurlに貼り付けている
+  background: url('data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%201L21.05%206.4C21.35%206.58333%2021.5833%206.83333%2021.75%207.15C21.9167%207.46667%2022%207.8%2022%208.15V19C22%2019.55%2021.8043%2020.021%2021.413%2020.413C21.021%2020.8043%2020.55%2021%2020%2021H4C3.45%2021%202.97933%2020.8043%202.588%2020.413C2.196%2020.021%202%2019.55%202%2019V8.15C2%207.8%202.08333%207.46667%202.25%207.15C2.41667%206.83333%202.65%206.58333%202.95%206.4L12%201ZM12%2012.65L19.8%208L12%203.35L4.2%208L12%2012.65ZM12%2015L4%2010.2V19H20V10.2L12%2015ZM12%2019H20H4H12Z%22%20fill%3D%22%23#{$color}%22%2F%3E%3C%2Fsvg%3E') no-repeat;
+}
+// icon2
+@mixin icon2($color) {
+  //base64にてSVGファイルをエンコードしたコードをそのままurlに貼り付けている
+  background: url('data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%2018C1.45%2018%200.979%2017.8043%200.587%2017.413C0.195667%2017.021%200%2016.55%200%2016V2C0%201.45%200.195667%200.979%200.587%200.587C0.979%200.195667%201.45%200%202%200H13L18%205V16C18%2016.55%2017.8043%2017.021%2017.413%2017.413C17.021%2017.8043%2016.55%2018%2016%2018H2ZM2%2016H16V6H12V2H2V16ZM4%2014H14V12H4V14ZM4%206H9V4H4V6ZM4%2010H14V8H4V10Z%22%20fill%3D%22%23#{$color}%22%2F%3E%3C%2Fsvg%3E')no-repeat;
+}

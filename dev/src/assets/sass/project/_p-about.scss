@@ -1,0 +1,71 @@
+@use "../global" as global;
+
+.p-about {
+
+  background-color: global.$link-btn-color;
+  color: #fff;
+
+  &__items-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include global.mq(tab) {
+      flex-wrap: wrap;
+    }
+
+    @include global.mq(sp) {
+      display: block;
+    }
+  }
+
+  &__items-text {
+    width: 42.43%;
+
+  }
+
+  &__lead {
+    font-size: 32px;
+    font-weight: global.$fw-base;
+    line-height: 52px;
+    padding-top: 50px;
+
+    @include global.mq(sp) {
+      font-size: 18px;
+      padding-top: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-right: 35.3%;
+
+    @include global.mq (sp) {
+      font-size: 14px;
+      padding-right: 0;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: global.$ff-en;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+    color: #fff;
+
+    @include global.mq(sp) {
+      font-size: 16px;
+      line-height: 32px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    height: auto;
+  }
+}

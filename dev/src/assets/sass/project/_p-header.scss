@@ -1,0 +1,163 @@
+@use '../global' as global;
+
+
+.p-header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        width: 192px;
+
+            @include global.mq(sp) {
+                width: 96px;
+            }
+
+            &__link {
+                display: flex;
+            }
+    }
+
+    &__nav {
+        margin-left: auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        //c-btnとバッティングしないようにaタグでなくliタグに付与
+        font-family: global.$ff-en;
+        font-size: 18px;
+        line-height: 36px;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+        //　線の起点にするため
+        position: relative;
+
+        &::before,
+        &::after {
+            content:"";
+            /*絶対配置で線の位置を決める*/
+            position: absolute;
+            background: #fff;
+            /*線の形状*/
+            width: 0;
+            height: 1px;
+            /*アニメーションの指定*/
+            transition: all 0.2s;
+        }
+
+        &::before {
+            right: 0;
+            bottom: 0;
+        }
+
+        &::after {
+            left: 0;
+            top: 0;
+        }
+
+        &:not(:first-of-type) {
+            margin-left: calc(74px - 20px - 20px);
+            // aタグに左右padding20pxが付いているため
+        }
+
+        &--contact {
+            &:not(:first-of-type) {
+                margin-left: 28px;
+            }
+        }
+
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+        }
+
+        &:hover::after {
+            transition-delay: 0s; //すぐ線を出現させる
+        }
+
+        &:hover::before {
+            transition-delay: 0.3s; //線の出現を0.3秒遅らせる
+        }
+    }
+
+    &__item__link {
+        display: block;
+
+        .p-header__item > & {
+            padding: 5px 20px;
+            // ナビゲーションを押しやすくするための処置
+        }
+
+        //線の基点位置 2 span
+        & > span {
+            display: block;
+
+            &::before,
+            &::after {
+                content: "";
+                //絶対配置で線の位置を決める
+                position: absolute;
+                background:  #fff;
+                //線の形状
+                width: 1px;
+                height: 0;
+                //アニメーションの指定
+                transition: all 0.1s;
+            }
+
+            &::before {
+                left: 0;
+                bottom: 0;
+            }
+
+            &::after {
+                right: 0;
+                top: 0;
+            }
+
+            .p-header__item:hover &::before,
+            .p-header__item:hover &::after {
+                height: 100%;
+            }
+
+            .p-header__item:hover &::before {
+                transition-delay: 0.5s; //線の出現を0.5秒遅らせる
+            }
+
+            .p-header__item:hover &::after {
+                transition-delay: 0.2s; //線の出現を0.2秒遅らせる
+            }
+
+        }
+    }
+}
+
+// header 1177px 文字折り返しのため調整
+@media screen and (max-width: 1177px) {
+    .p-header {
+        &__item {
+            font-size: 16px;
+
+            &--contact {
+                font-size: 16px;
+                padding: 10px 70px;
+
+                &:hover {
+                    //borderとの差異をなくす処理
+                    padding: 9px 69px;
+                }
+            }
+
+            &:not(:first-of-type) {
+                margin-left: calc(64px - 20px - 20px);
+                // aタグに左右padding20pxが付いているため
+            }
+        }
+    }
+}

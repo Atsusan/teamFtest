@@ -1,0 +1,92 @@
+@use '../global' as global;
+
+.p-card {
+    display: flex;
+    flex-direction: column;
+    width: 280px;  //　文字、画像が抜けてもレイアウトが崩れない処置
+    height: 400px; // レスポンシブ時での高さ調整は必要かもしれない
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: opacity .3s;
+    cursor: pointer;
+
+        @include global.mq(sp) {
+            min-height: 150px;
+        }
+
+    &__head {
+        flex-shrink: 0; // 文字のスペースに押されない処置
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 62.5%;
+        }
+
+        & > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s;
+        }
+    }
+
+    &:hover {
+        opacity: .8;
+
+        .p-card__head > img {
+            transform: scale(1.1);
+        }
+    }
+
+    &__body {
+        padding: 15px 25px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 38px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        // CSS側での文字制限処置　PHP側で操作した方がいいかもしれない
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+
+            @include global.mq(sp) {
+                font-size: 16px;
+                line-height: 32px;
+            }
+    }
+
+    &__description {
+        font-family: global.$ff-en;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        // 文字制限処理
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+
+            @include global.mq(sp) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+    }
+
+}

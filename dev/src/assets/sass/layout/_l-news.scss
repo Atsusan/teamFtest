@@ -1,0 +1,24 @@
+@use '../global' as global;
+
+.l-news {
+  margin: 80px auto;
+  width: 1440px;
+  max-width: 100%;
+
+  @include global.mq(sp) {
+    margin: 50px auto;
+    padding: 0 40px;
+  }
+}
+
+.l-news__title {
+  margin-left: 220px;
+  width: 1440px;
+  max-width: 100%;
+  height: auto;
+
+  @include global.mq(sp) {
+    margin-left: 0px;
+  }
+}
+

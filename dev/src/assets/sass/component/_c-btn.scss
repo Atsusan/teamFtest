@@ -1,0 +1,129 @@
+@use '../global' as global;
+
+// 青色のボタン、アイコンを付加する場合や色違いはモディファイアとして登録お願いします。
+.c-btn {
+    //サイズ
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    // 色
+    color: #fff;
+    background-color: global.$link-btn-color;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    // 位置
+    padding: 13px 80px;
+    display: inline-block;
+    position: relative;
+    // アニメーション
+    transition: background-color .3s, color .3s;
+
+        @include global.mq(sp) {
+            //サイズ
+            font-style: 14px;
+            //行間
+            line-height: 22px;
+            //位置
+            padding: 9px 58px;
+        }
+
+    &::after {
+        content: "";
+        // 位置
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        // サイズ
+        width: 24px;
+        height: 15px;
+        // SVG カラー変更は直接svg画像から調整しています。色変えなどあれば、画像を複製して調整してください.
+        background: url(../img/parts/line-white.svg) no-repeat center center/contain;
+        // アニメーション
+        transition: all .3s;
+
+            @include global.mq(sp) {
+                //位置
+                right: 18px;
+            }
+    }
+
+    &:hover::after {
+        right: 16px;
+        // 色の変更
+        background: url(../img/parts/line-blue.svg) no-repeat center center/contain;
+
+            @include global.mq(sp) {
+                right: 14px;
+            }
+    }
+
+    &:hover {
+        background-color: #fff;
+        color: global.$link-btn-color;
+        border: 1px solid global.$link-btn-color;
+        //borderとの差異をなくす処理
+        padding: 12px 79px;
+    }
+
+    // モディファイア
+
+    &--iconBl,
+    &--iconWh {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            transform: translateX(-50%);
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+
+                @include global.mq(sp) {
+                    left: 20px;
+                }
+        }
+    }
+
+    &--iconBl {
+        &::before {
+            @include global.icon1("fff");
+        }
+        &:hover::before {
+            @include global.icon1("285DB1");
+        }
+    }
+
+    &--iconWh {
+        background-color: #fff;
+        color: global.$main-color;
+
+        &::after {
+            background: url(../img/parts/line-blue.svg) no-repeat center center/contain;
+        }
+
+        &::before {
+            transform: translateY(-9px);
+            @include global.icon2("285DB1");
+        }
+
+        &:hover {
+            background-color: global.$main-color;
+            color: #fff;
+
+            &::after {
+                background: url(../img/parts/line-white.svg) no-repeat center center/contain;
+            }
+        }
+
+        &:hover::before {
+            @include global.icon2("ffffff");
+        }
+    }
+
+
+
+}

@@ -1,0 +1,39 @@
+@use '../global' as global;
+
+.l-mv {
+    position: relative;
+
+    &__content-area {
+        position: absolute;
+        top: calc(305 / 784 * 100%);
+        right: calc( 50vw + 34px);
+
+            @include global.mq(tab) {
+                right: 0;
+                left: 40px;
+            }
+
+            @include global.mq(sp) {
+                top: 288px;
+                right: 0;
+                left: 40px;
+            }
+    }
+
+    &__read-sub {
+        margin-top: 26px;
+
+            @include global.mq(sp) {
+                margin-top: 8px;
+            }
+
+            @include global.mq(sp) {
+                margin-top: 5px;
+            }
+    }
+
+    &__contact {
+        margin-top: 30px;
+    }
+
+}

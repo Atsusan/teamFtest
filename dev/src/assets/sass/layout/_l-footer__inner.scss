@@ -1,0 +1,18 @@
+@use "../global";
+
+.l-footer__inner {
+  padding: 80px 20px 30px 20px;
+
+  @include global.mq("sp") {
+    padding: 30px 40px;
+  }
+
+}
+
+.l-footer__nav {
+  padding-bottom: 30px;
+
+  @include global.mq("sp") {
+    padding-bottom: 20px;
+  }
+}

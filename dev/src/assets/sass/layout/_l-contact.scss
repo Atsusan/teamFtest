@@ -1,0 +1,17 @@
+@use '../global' as global;
+
+.l-contact {
+    padding: 80px 0;
+
+        @include global.mq(sp) {
+            padding: 50px 0;
+        }
+
+    &__title {
+        margin-bottom: 60px;
+
+            @include global.mq(sp) {
+                margin-bottom: 30px;
+            }
+    }
+}

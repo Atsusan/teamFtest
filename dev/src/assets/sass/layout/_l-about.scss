@@ -1,0 +1,33 @@
+@use "../global" as global;
+
+.l-about {
+
+      @include global.mq(sp) {
+        padding: 50px 0;
+      }
+
+  &__inner {
+    padding: 80px 0;
+    padding-left: 15.2672%;
+
+    @include global.mq (tab) {
+      margin: auto;
+    }
+
+    @include global.mq(sp) {
+      padding: 50px 40px;
+    }
+  }
+
+  &__btnArea {
+    padding-top: 50px;
+
+    @include global.mq(tab) {
+      padding-bottom: 30px;
+    }
+
+    @include global.mq(sp) {
+      text-align: right;
+    }
+  }
+}

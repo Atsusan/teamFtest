@@ -1,0 +1,19 @@
+@use '../global' as global;
+
+.p-blog {
+
+    &__btn {
+        font-family: global.$ff-en;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        letter-spacing: 0.1em;
+        color: #333;
+
+            @include global.mq(sp) {
+                font-size: 16px;
+                line-height: 32px;
+                letter-spacing: 0;
+            }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../global' as global;
+
+.l-products {
+  background: global.$cGray;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  @include global.mq(sp) {
+    padding: 50px 0;
+  }
+}
+
+.l-products__inner {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include global.mq(sp) {
+    padding: 0 40px;
+  }
+}
+
+.l-products__title {
+  margin-left: 220px;
+  width: 1440px;
+  max-width: 100%;
+  height: auto;
+
+  @include global.mq(sp) {
+    margin-left: 0px;
+  }
+}
+
